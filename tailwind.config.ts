@@ -14,6 +14,7 @@ const config: Config = {
         "background-secondary": "var(--background-secondary)",
         "background-tertiary": "var(--background-tertiary)",
         foreground: "var(--foreground)",
+        "foreground-secondary": "var(--foreground-secondary)",
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
