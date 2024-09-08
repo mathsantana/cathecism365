@@ -18,6 +18,7 @@ import {
   Table,
 } from "@/components/ui/table";
 import Image from "next/image";
+import mockData from "./mock_table.json";
 
 export default function Home() {
   return (
@@ -54,21 +55,23 @@ export default function Home() {
                   </TableRow>
                 </TableHeader>
                 <TableBody>
-                  <TableRow>
-                    <TableCell className="border-r-[1px] border-b-[1px] border-foreground-secondary">
-                      <CTCheckbox className="mr-3" /> <span>1</span>
-                    </TableCell>
-                    <TableCell className="border-r-[1px] border-b-[1px] border-foreground-secondary">
-                      <div className="w-full flex justify-between">
-                        <span>Gn 1</span>
-                        <span>Sl 1</span>
-                        <span>Mt 1.1-17</span>
-                      </div>
-                    </TableCell>
-                    <TableCell className="border-b-[1px] border-foreground-secondary">
-                      Intro.
-                    </TableCell>
-                  </TableRow>
+                  {mockData.map(({ dia, escrituras, catecismo }) => (
+                    <TableRow key={`table-row-${1}`}>
+                      <TableCell className="border-r-[1px] border-b-[1px] border-foreground-secondary">
+                        <CTCheckbox className="mr-3" /> <span>{dia}</span>
+                      </TableCell>
+                      <TableCell className="border-r-[1px] border-b-[1px] border-foreground-secondary">
+                        <div className="w-full grid grid-cols-3 ">
+                          <span>{escrituras[0]}</span>
+                          <span>{escrituras[1]}</span>
+                          <span>{escrituras[2]}</span>
+                        </div>
+                      </TableCell>
+                      <TableCell className="border-b-[1px] border-foreground-secondary">
+                        {catecismo}
+                      </TableCell>
+                    </TableRow>
+                  ))}
                 </TableBody>
               </Table>
             </CardContent>

@@ -1,0 +1,52 @@
+[
+  {
+    "dia": "1",
+    "escrituras": ["Gn 1", "Sl 1", "Mt 1.1-17"],
+    "catecismo": "Intro."
+  },
+  {
+    "dia": "2",
+    "escrituras": ["Gn 2", "Sl 2", "Mt 1.18-25"],
+    "catecismo": "1-10"
+  },
+  {
+    "dia": "3",
+    "escrituras": ["Gn 3", "Sl 3", "Mt 2"],
+    "catecismo": "11-17"
+  },
+  {
+    "dia": "4",
+    "escrituras": ["Gn 4", "Sl 4", "Mt 3"],
+    "catecismo": "18-25"
+  },
+  {
+    "dia": "5",
+    "escrituras": ["Gn 5-6.8", "Sl 5", "Mt 4"],
+    "catecismo": "26-30"
+  },
+  {
+    "dia": "6",
+    "escrituras": ["Gn 6.9-7.24", "Sl 6", "Mt 5.1-20"],
+    "catecismo": "31-38"
+  },
+  {
+    "dia": "7",
+    "escrituras": ["Gn 8-9", "Sl 7", "Mt 5.21-48"],
+    "catecismo": "39-49"
+  },
+  {
+    "dia": "8",
+    "escrituras": ["Gn 10-11", "Sl 8", "Mt 6.1-18"],
+    "catecismo": "50-53"
+  },
+  {
+    "dia": "9",
+    "escrituras": ["Gn 12-13", "Sl 9", "Mt 6.19-34"],
+    "catecismo": "54-64"
+  },
+  {
+    "dia": "10",
+    "escrituras": ["Gn 14-15", "Sl 10", "Mt 7.1-14"],
+    "catecismo": "65-73"
+  }
+]
