@@ -1,3 +1,5 @@
+"use client";
+
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import CTCheckbox from "@/components/ui/custom/ctcheckbox";
@@ -19,8 +21,17 @@ import {
 } from "@/components/ui/table";
 import Image from "next/image";
 import mockData from "./mock_table.json";
+import { Cell, Label, Pie, PieChart, ResponsiveContainer } from "recharts";
 
 export default function Home() {
+  const READED_PERCENTAGE = 10;
+
+  const data = [
+    {
+      value: READED_PERCENTAGE,
+    },
+    { value: 100 - READED_PERCENTAGE },
+  ];
   return (
     <>
       <nav className="w-screen h-16 bg-background-tertiary flex justify-center">
@@ -100,8 +111,39 @@ export default function Home() {
             </CardFooter>
           </Card>
           <Card className="bg-background-secondary">
-            <CardContent>teste</CardContent>
-            <CardFooter>Pagination</CardFooter>
+            <CardContent>
+              <Table className="mt-5 w-full border-collapse text-foreground">
+                <TableHeader>
+                  <TableRow>
+                    <TableHead className="border-b-[1px] border-foreground-secondary">
+                      Estatísticas
+                    </TableHead>
+                  </TableRow>
+                </TableHeader>
+              </Table>
+              <div className="w-full">
+                <PieChart className="mx-auto" width={400} height={400}>
+                  <Pie
+                    startAngle={225}
+                    endAngle={-45}
+                    data={data}
+                    dataKey="value"
+                    cx="50%"
+                    cy="50%"
+                    innerRadius={100}
+                    outerRadius={150}
+                  >
+                    <Cell key={`cell-readed`} fill={"#82ca9d"} />
+                    <Cell key={`cell-empty`} fill={"#cccccc"} />
+                    <Label
+                      className="text-7xl text-foreground-secondary"
+                      value={`${READED_PERCENTAGE}%`}
+                      position="center"
+                    />
+                  </Pie>
+                </PieChart>
+              </div>
+            </CardContent>
           </Card>
         </div>
       </main>
